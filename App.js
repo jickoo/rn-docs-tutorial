@@ -1,24 +1,19 @@
-import React, { Component } from 'react';
-import { AppRegistry, Text, TextInput, View } from 'react-native';
+import React, {Component} from 'react';
+import {View} from 'react-native';
+import DynamicContext from './src/DynamicContext';
+import TogglerIndex from './src/DynamicContext/togglerIndex';
+import ConsumingMultipleContext from './src/DynamicContext/consumingMultipleContextIndex';
 
-export default class PizzaTranslator extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {text: ''};
-  }
-
+class App extends Component {
   render() {
     return (
-      <View style={{padding: 10, marginTop: 100}}>
-        <TextInput
-          style={{height: 40}}
-          placeholder="Type here to translate!"
-          onChangeText={(text) => this.setState({text})}
-        />
-        <Text style={{padding: 10, fontSize: 42,}}>
-          {this.state.text.split(' ').map((word) => word && '🍕').join(' ')}
-        </Text>
+      <View>
+        <DynamicContext/>
+        <TogglerIndex/>
+        <ConsumingMultipleContext/>
       </View>
     );
   }
 }
+
+export default App;

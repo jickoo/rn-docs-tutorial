@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "react": "16.6.3",
+    "react-button": "^1.2.1",
     "react-native": "0.58.3"
   },
   "devDependencies": {
